@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.76ded7c9.chunk.css",
-    "main.js": "/static/js/main.3246f3cd.chunk.js",
-    "main.js.map": "/static/js/main.3246f3cd.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.82e499d2.js",
-    "runtime-main.js.map": "/static/js/runtime-main.82e499d2.js.map",
-    "static/css/2.0556c4f0.chunk.css": "/static/css/2.0556c4f0.chunk.css",
-    "static/js/2.5d38aa11.chunk.js": "/static/js/2.5d38aa11.chunk.js",
-    "static/js/2.5d38aa11.chunk.js.map": "/static/js/2.5d38aa11.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.1535ddf3fd705ca47d2961822fd598da.js": "/precache-manifest.1535ddf3fd705ca47d2961822fd598da.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.0556c4f0.chunk.css.map": "/static/css/2.0556c4f0.chunk.css.map",
-    "static/css/main.76ded7c9.chunk.css.map": "/static/css/main.76ded7c9.chunk.css.map",
-    "static/js/2.5d38aa11.chunk.js.LICENSE.txt": "/static/js/2.5d38aa11.chunk.js.LICENSE.txt",
-    "static/media/primereact.min.css": "/static/media/line.567f5738.gif",
-    "static/media/theme.css": "/static/media/open-sans-v15-latin-regular.cffb686d.woff2",
-    "static/media/primeicons.css": "/static/media/primeicons.e5e0e944.svg"
+    "main.css": "/covid-19-stats/static/css/main.76ded7c9.chunk.css",
+    "main.js": "/covid-19-stats/static/js/main.f2139b0e.chunk.js",
+    "main.js.map": "/covid-19-stats/static/js/main.f2139b0e.chunk.js.map",
+    "runtime-main.js": "/covid-19-stats/static/js/runtime-main.b4405b2f.js",
+    "runtime-main.js.map": "/covid-19-stats/static/js/runtime-main.b4405b2f.js.map",
+    "static/css/2.639007d8.chunk.css": "/covid-19-stats/static/css/2.639007d8.chunk.css",
+    "static/js/2.5d38aa11.chunk.js": "/covid-19-stats/static/js/2.5d38aa11.chunk.js",
+    "static/js/2.5d38aa11.chunk.js.map": "/covid-19-stats/static/js/2.5d38aa11.chunk.js.map",
+    "index.html": "/covid-19-stats/index.html",
+    "precache-manifest.747462285bf891a403d5416e95f126a2.js": "/covid-19-stats/precache-manifest.747462285bf891a403d5416e95f126a2.js",
+    "service-worker.js": "/covid-19-stats/service-worker.js",
+    "static/css/2.639007d8.chunk.css.map": "/covid-19-stats/static/css/2.639007d8.chunk.css.map",
+    "static/css/main.76ded7c9.chunk.css.map": "/covid-19-stats/static/css/main.76ded7c9.chunk.css.map",
+    "static/js/2.5d38aa11.chunk.js.LICENSE.txt": "/covid-19-stats/static/js/2.5d38aa11.chunk.js.LICENSE.txt",
+    "static/media/primereact.min.css": "/covid-19-stats/static/media/line.567f5738.gif",
+    "static/media/theme.css": "/covid-19-stats/static/media/open-sans-v15-latin-regular.cffb686d.woff2",
+    "static/media/primeicons.css": "/covid-19-stats/static/media/primeicons.e5e0e944.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.82e499d2.js",
-    "static/css/2.0556c4f0.chunk.css",
+    "static/js/runtime-main.b4405b2f.js",
+    "static/css/2.639007d8.chunk.css",
     "static/js/2.5d38aa11.chunk.js",
     "static/css/main.76ded7c9.chunk.css",
-    "static/js/main.3246f3cd.chunk.js"
+    "static/js/main.f2139b0e.chunk.js"
   ]
 }
