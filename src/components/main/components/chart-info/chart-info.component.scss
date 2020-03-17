@@ -1,0 +1,12 @@
+@import '../../../../styles/variables';
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
+.chart-info-component {
+  @include breakpoint(0 $md - 1) {
+    overflow: scroll;
+
+    .p-chart {
+      min-width: 700px;
+    }
+  }
+}

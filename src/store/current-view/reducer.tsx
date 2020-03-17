@@ -1,16 +1,16 @@
 import MainAction from '../model/main.action';
-import {StatsActionTypesEnum} from './types';
-import StatsState from './model/stats.state';
-import StatsStateImp from './model/stats.state.imp';
-import {SetCountriesAction} from './actions';
+import {CurrentViewActionTypesEnum} from './types';
+import {SetSelectorOptionAction} from './actions';
+import CurrentViewState from './model/current-view.state';
+import CurrentViewStateImp from './model/current-view.state.imp';
 
-const initialState: StatsState = new StatsStateImp();
+const initialState: CurrentViewState = new CurrentViewStateImp();
 
-const statsReducer = (state = initialState, action: MainAction) => {
+const currentViewReducer = (state = initialState, action: MainAction) => {
     switch (action.type) {
-        case StatsActionTypesEnum.SET_COUNTRIES: {
+        case CurrentViewActionTypesEnum.SET_SELECTOR_OPTION: {
             return Object.assign({}, state, {
-                countries: (action as SetCountriesAction).countries
+                selectorOption: (action as SetSelectorOptionAction).selectorOption
             });
         }
         default:
@@ -18,4 +18,4 @@ const statsReducer = (state = initialState, action: MainAction) => {
     }
 };
 
-export default statsReducer;
+export default currentViewReducer;

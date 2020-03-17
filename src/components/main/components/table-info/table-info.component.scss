@@ -1,0 +1,37 @@
+@import '../../../../styles/variables';
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
+.table-info-component {
+  a, a:hover {
+    color: $primary;
+    font-weight: bold;
+  }
+
+  .country-link, .country-link:hover {
+    padding: 5px;
+    background-color: $primary;
+    border-radius: 2px;
+    float: right;
+    color: white;
+  }
+
+  @include breakpoint(0 $sm - 1) {
+    overflow: scroll;
+
+    .p-datatable {
+      min-width: 450px;
+
+      .p-paginator {
+        width: fit-content;
+
+        button {
+          box-shadow: none;
+        }
+      }
+    }
+
+    .paginator-info {
+      left: 60px !important;
+    }
+  }
+}

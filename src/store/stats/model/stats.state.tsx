@@ -1,4 +1,5 @@
-export default interface LoadingState {
-    loading: boolean;
-    loadingCounter: number;
+import Country from 'model/country';
+
+export default interface StatsState {
+    countries: Country[];
 }

@@ -1,28 +1,16 @@
 import MainAction from '../model/main.action';
-import {LoadingActionTypesEnum} from './types';
-import LoadingState from './model/loading.state';
-import LoadingStateImp from './model/loading.state.imp';
+import {StatsActionTypesEnum} from './types';
+import StatsState from './model/stats.state';
+import StatsStateImp from './model/stats.state.imp';
+import {SetCountriesAction} from './actions';
 
-const initialState: LoadingState = new LoadingStateImp();
+const initialState: StatsState = new StatsStateImp();
 
-const loadingReducer = (state = initialState, action: MainAction) => {
+const statsReducer = (state = initialState, action: MainAction) => {
     switch (action.type) {
-        case LoadingActionTypesEnum.SHOW_LOADING: {
+        case StatsActionTypesEnum.SET_COUNTRIES: {
             return Object.assign({}, state, {
-                loading: true,
-                loadingCounter: state.loadingCounter + 1
-            });
-        }
-        case LoadingActionTypesEnum.HIDE_LOADING: {
-            let loadingCounter: number = state.loadingCounter;
-
-            if (state.loadingCounter > 0) {
-                loadingCounter--;
-            }
-
-            return Object.assign({}, state, {
-                loading: loadingCounter !== 0,
-                loadingCounter: loadingCounter
+                countries: (action as SetCountriesAction).countries
             });
         }
         default:
@@ -30,4 +18,4 @@ const loadingReducer = (state = initialState, action: MainAction) => {
     }
 };
 
-export default loadingReducer;
+export default statsReducer;

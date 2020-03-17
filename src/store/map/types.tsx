@@ -1,4 +1,4 @@
 /* istanbul ignore file */
-export enum StatsActionTypesEnum {
-    SET_COUNTRIES = 'stats/set-countries'
+export enum MapActionTypesEnum {
+    SET_MAP_DATA = 'map/set-data'
 }

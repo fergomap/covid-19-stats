@@ -1,0 +1,96 @@
+@import '../styles/variables';
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
+.vertically-centered {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-hidden {
+  @include breakpoint(0 $sm - 1) {
+    display: none !important;
+  }
+}
+
+.desktop-hidden {
+  @include breakpoint($sm) {
+    display: none !important;
+  }
+}
+
+.white-box {
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+  border-radius: 2px;
+  padding: $padding;
+
+  @include breakpoint($md) {
+    padding: 30px;
+  }
+}
+
+.margin-top {
+  margin-top: 20px;
+}
+
+.p-datatable {
+  .p-datatable-thead > tr > th {
+    text-align: left !important;
+    color: white !important;
+    background-color: $primary !important;
+    border: none !important;
+  }
+
+  .p-sortable-column-icon {
+    color: white !important;
+  }
+
+  .p-datatable-tbody {
+    > tr > td {
+      border: none !important;
+      border-bottom: solid 1px lightgray !important;
+      background-color: white !important;
+      white-space: nowrap !important;
+      overflow: auto !important;
+    }
+  }
+
+  .p-paginator {
+    text-align: right !important;
+    background-color: white !important;
+    border: none !important;
+
+    button:hover {
+      background-color: white !important;
+    }
+
+    .p-paginator-first, .p-paginator-last, .p-paginator-pages {
+      display: none !important;
+    }
+
+    .p-paginator-prev, .p-paginator-next {
+      color: $primary !important;
+    }
+  }
+}
+
+.paginator-info {
+  bottom: 4px !important;
+  right: 80px !important;
+  position: absolute !important;
+}
+
+input {
+  border-radius: 3px;
+  border: solid 1px $primary;
+  padding: 5px;
+  outline: 0 !important;
+}
+
+a, a:hover {
+  text-decoration: none !important;
+}
+
+.global {
+  z-index: 1002 !important;
+}

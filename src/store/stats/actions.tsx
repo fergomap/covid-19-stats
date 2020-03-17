@@ -1,11 +1,13 @@
 /* istanbul ignore file */
 import MainAction from '../model/main.action';
-import {LoadingActionTypesEnum} from './types';
+import {StatsActionTypesEnum} from './types';
+import Country from 'model/country';
 
-export const SHOW_LOADING_ACTION: MainAction = {
-    type: LoadingActionTypesEnum.SHOW_LOADING
-};
+export interface SetCountriesAction extends MainAction {
+    countries: Country[];
+}
 
-export const HIDE_LOADING_ACTION: MainAction = {
-    type: LoadingActionTypesEnum.HIDE_LOADING
+export const SET_COUNTRIES_ACTION: SetCountriesAction = {
+    type: StatsActionTypesEnum.SET_COUNTRIES,
+    countries: []
 };

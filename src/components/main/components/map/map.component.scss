@@ -1,0 +1,56 @@
+@import '../../../../styles/variables';
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
+.map-component {
+  #map {
+    height: 500px;
+  }
+
+  .leaflet-pane {
+    height: 100%;
+  }
+
+  .p-calendar {
+    margin-bottom: $margin;
+
+    @include breakpoint(0 $sm - 1) {
+      width: 100%;
+    }
+
+    .p-datepicker {
+      z-index: 1001 !important;
+    }
+
+    input {
+      border: solid 1px $primary !important;
+    }
+  }
+
+  .color-span {
+    width: 30px;
+    height: 15px;
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+  .marker-info {
+    position: relative;
+    background-color: $primary;
+    color: white;
+    border-radius: 3px;
+    width: fit-content;
+    margin-bottom: $margin;
+    padding: $padding 30px $padding $padding;
+
+    i {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+    }
+
+    @include breakpoint(0 $sm - 1) {
+      width: 100%;
+    }
+  }
+}

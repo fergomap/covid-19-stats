@@ -1,13 +1,14 @@
 /* istanbul ignore file */
 import MainAction from '../model/main.action';
-import {StatsActionTypesEnum} from './types';
-import Country from 'model/country';
+import SelectorOption from 'components/main/components/view-selector/model/selector-option';
+import {CurrentViewActionTypesEnum} from './types';
+import SelectorOptionImp from 'components/main/components/view-selector/model/selector-option.imp';
 
-export interface SetCountriesAction extends MainAction {
-    countries: Country[];
+export interface SetSelectorOptionAction extends MainAction {
+    selectorOption: SelectorOption;
 }
 
-export const SET_COUNTRIES_ACTION: SetCountriesAction = {
-    type: StatsActionTypesEnum.SET_COUNTRIES,
-    countries: []
+export const SET_SELECTOR_OPTION_ACTION: SetSelectorOptionAction = {
+    type: CurrentViewActionTypesEnum.SET_SELECTOR_OPTION,
+    selectorOption: new SelectorOptionImp()
 };

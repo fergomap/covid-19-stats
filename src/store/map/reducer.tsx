@@ -1,16 +1,16 @@
 import MainAction from '../model/main.action';
-import {StatsActionTypesEnum} from './types';
-import StatsState from './model/stats.state';
-import StatsStateImp from './model/stats.state.imp';
-import {SetCountriesAction} from './actions';
+import {MapActionTypesEnum} from './types';
+import MapState from './model/map.state';
+import MapStateImp from './model/map.state.imp';
+import {SetMapDataAction} from './actions';
 
-const initialState: StatsState = new StatsStateImp();
+const initialState: MapState = new MapStateImp();
 
-const statsReducer = (state = initialState, action: MainAction) => {
+const mapReducer = (state = initialState, action: MainAction) => {
     switch (action.type) {
-        case StatsActionTypesEnum.SET_COUNTRIES: {
+        case MapActionTypesEnum.SET_MAP_DATA: {
             return Object.assign({}, state, {
-                countries: (action as SetCountriesAction).countries
+                data: (action as SetMapDataAction).data
             });
         }
         default:
@@ -18,4 +18,4 @@ const statsReducer = (state = initialState, action: MainAction) => {
     }
 };
 
-export default statsReducer;
+export default mapReducer;

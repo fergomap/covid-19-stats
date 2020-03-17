@@ -1,15 +1,15 @@
 /* istanbul ignore file */
 import {combineReducers} from 'redux';
-import campaignReducer from './campaign/reducer';
-import cityReducer from './city/reducer';
+import currentViewReducer from './current-view/reducer';
+import languageReducer from './language/reducer';
 import loadingReducer from './loading/reducer';
-import modalReducer from './modal/reducer';
-import userReducer from './user/reducer';
+import mapReducer from './map/reducer';
+import statsReducer from './stats/reducer';
 
 export const mainReducer = combineReducers({
-    campaign: campaignReducer,
-    city: cityReducer,
+    currentView: currentViewReducer,
+    language: languageReducer,
     loading: loadingReducer,
-    modal: modalReducer,
-    user: userReducer
+    map: mapReducer,
+    stats: statsReducer
 });

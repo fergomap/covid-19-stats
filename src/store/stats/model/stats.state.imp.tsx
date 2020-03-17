@@ -1,14 +1,11 @@
 /* istanbul ignore file */
-import LoadingState from './loading.state';
+import StatsState from './stats.state';
+import Country from 'model/country';
 
-export default class LoadingStateImp implements LoadingState {
+export default class StatsStateImp implements StatsState {
+    countries: Country[];
 
-    loading: boolean;
-    loadingCounter: number;
-
-    constructor(loading: boolean = false, loadingCounter: number = 0) {
-        this.loading = loading;
-        this.loadingCounter = loadingCounter;
+    constructor(countries: Country[] = []) {
+        this.countries = countries;
     }
-
 }

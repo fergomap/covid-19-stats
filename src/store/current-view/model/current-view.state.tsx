@@ -1,5 +1,5 @@
-import Country from 'model/country';
+import SelectorOption from 'components/main/components/view-selector/model/selector-option';
 
-export default interface StatsState {
-    countries: Country[];
+export default interface CurrentViewState {
+    selectorOption: SelectorOption;
 }

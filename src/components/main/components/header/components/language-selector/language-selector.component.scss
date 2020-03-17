@@ -1,15 +1,17 @@
 @import '../../../../../../styles/variables';
 
 .language-selector-component {
+  outline: 0 !important;
+
   .p-dropdown {
     height: 40px;
-    margin-right: 10px;
-    border-color: $blue;
+    border-color: $primary;
     width: 120px;
     min-width: 120px;
+    box-shadow: none !important;
 
     .pi-chevron-down {
-      color: $blue;
+      color: $primary;
     }
 
     .p-dropdown-label {

@@ -3,16 +3,15 @@ import './language-selector.component.scss';
 import {Dropdown} from 'primereact/dropdown';
 import {LANGUAGE_CONSTANTS} from 'config/language.config';
 import LanguageOption from 'model/language-option';
-import {connect} from 'react-redux';
-import {getLocale, mapLanguageToProps, setLocale} from 'services/language.service';
+import {useDispatch, useSelector} from 'react-redux';
+import {getLocale, setLocale} from 'services/language.service';
 import {CHANGE_LANGUAGE_ACTION} from 'store/language/actions';
-import PropsDispatch from 'model/props-dispatch';
+import MainState from 'store/model/main.state';
 
-export interface LanguageSelectorComponentProps {
-    language: LanguageOption;
-}
+const LanguageSelectorComponent: FunctionComponent = (): ReactElement => {
+    const dispatch = useDispatch();
+    const language = useSelector((state: MainState) => state.language.language);
 
-const LanguageSelectorComponent: FunctionComponent<LanguageSelectorComponentProps & PropsDispatch> = ({language, dispatch}): ReactElement => {
     const handleSelectLanguage = (e: { originalEvent: Event, value: string }): void => {
         const selectedLanguage = getLocale(e.value);
         const changeLanguageAction = {...CHANGE_LANGUAGE_ACTION};
@@ -38,6 +37,4 @@ const LanguageSelectorComponent: FunctionComponent<LanguageSelectorComponentProp
     </div>;
 };
 
-export default connect(mapLanguageToProps)(LanguageSelectorComponent);
-
-export { LanguageSelectorComponent as LanguageSelectorComponentDisconnected };
+export default LanguageSelectorComponent;

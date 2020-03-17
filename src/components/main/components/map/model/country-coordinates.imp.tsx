@@ -1,10 +1,11 @@
-import CountryCoordinate from './country-coordinate';
+import CountryCoordinates from './country-coordinates';
+import {LatLngTuple} from 'leaflet';
 
-export default class CountryCoordinateImp implements CountryCoordinate {
+export default class CountryCoordinatesImp implements CountryCoordinates {
 	name: string;
-	latLong: number[];
+	latLong: LatLngTuple;
 
-	constructor(name: string, latLong: number[]) {
+	constructor(name: string = '', latLong: LatLngTuple = [0, 0]) {
 		this.name = name;
 		this.latLong = latLong;
 	}

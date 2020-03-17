@@ -1,0 +1,27 @@
+@import '../../../../styles/variables';
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
+.data-info-component {
+  background-color: $primary;
+  padding: $padding;
+  margin: 0 !important;
+  color: white;
+
+  @include breakpoint($md) {
+    height: $footer-height;
+  }
+
+  .linked-in-link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  a, a:hover {
+    color: white;
+  }
+
+  @include breakpoint(0 $sm - 1) {
+    margin-bottom: 46px !important;
+  }
+}

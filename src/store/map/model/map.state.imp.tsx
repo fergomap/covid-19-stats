@@ -1,11 +1,10 @@
 /* istanbul ignore file */
-import StatsState from './stats.state';
-import Country from 'model/country';
+import MapState from './map.state';
 
-export default class StatsStateImp implements StatsState {
-    countries: Country[];
+export default class MapStateImp implements MapState {
+    data: any;
 
-    constructor(countries: Country[] = []) {
-        this.countries = countries;
+    constructor(data: any = {}) {
+        this.data = data;
     }
 }

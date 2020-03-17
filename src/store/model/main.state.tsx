@@ -1,13 +1,13 @@
-import CampaignState from '../campaign/model/campaign.state';
-import CityState from '../city/model/city.state';
+import CurrentViewState from '../current-view/model/current-view.state';
+import LanguageState from '../language/model/language.state';
 import LoadingState from '../loading/model/loading.state';
-import ModalState from '../modal/model/modal.state';
-import UserState from '../user/model/user.state';
+import MapState from '../map/model/map.state';
+import StatsState from '../stats/model/stats.state';
 
 export default interface MainState {
-    campaign: CampaignState;
-    city: CityState;
+    currentView: CurrentViewState;
+    language: LanguageState;
     loading: LoadingState;
-    modal: ModalState;
-    user: UserState;
+    map: MapState;
+    stats: StatsState;
 }

@@ -1,4 +1,4 @@
 /* istanbul ignore file */
-export enum StatsActionTypesEnum {
-    SET_COUNTRIES = 'stats/set-countries'
+export enum CurrentViewActionTypesEnum {
+    SET_SELECTOR_OPTION = 'current-view/set-selector-option'
 }

@@ -1,0 +1,39 @@
+@import '../../../../styles/variables';
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
+.header-component {
+  background-color: $primary;
+  height: $header-height;
+  width: 100%;
+  color: white;
+  margin: 0 !important;
+
+  a, a:hover {
+    color: white;
+    width: 100%;
+  }
+
+  h2 {
+    text-align: center;
+    margin: 0;
+    width: 100%;
+
+    @include breakpoint(0 $lg - 1) {
+      text-align: left;
+    }
+  }
+
+  .title {
+    @include breakpoint(0 $sm - 1) {
+      width: 75%;
+    }
+  }
+
+  .language-selector-container {
+    justify-content: flex-end;
+
+    @include breakpoint(0 $sm - 1) {
+      width: 25%;
+    }
+  }
+}

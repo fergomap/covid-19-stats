@@ -1,13 +1,12 @@
 /* istanbul ignore file */
 import MainAction from '../model/main.action';
-import {StatsActionTypesEnum} from './types';
-import Country from 'model/country';
+import {MapActionTypesEnum} from './types';
 
-export interface SetCountriesAction extends MainAction {
-    countries: Country[];
+export interface SetMapDataAction extends MainAction {
+    data: any;
 }
 
-export const SET_COUNTRIES_ACTION: SetCountriesAction = {
-    type: StatsActionTypesEnum.SET_COUNTRIES,
-    countries: []
+export const SET_MAP_DATA_ACTION: SetMapDataAction = {
+    type: MapActionTypesEnum.SET_MAP_DATA,
+    data: {}
 };
