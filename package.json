@@ -1,6 +1,6 @@
 {
   "name": "covid-19-stats",
-  "homepage": "https://fergomap.github.io/covid-19-stats",
+  "homepage": "https://fergomap.github.io/covid-19-stats/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

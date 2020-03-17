@@ -13,10 +13,10 @@ interface AppConfig {
 
 export const APP_CONSTANTS: AppConfig = {
 	ROUTES: {
-		ROOT: '/',
-		HOME: '/home',
-		COUNTRY: '/country',
-		COUNTRY_INFO: '/country/:countryName'
+		ROOT: `${process.env.PUBLIC_URL}/`,
+		HOME: `${process.env.PUBLIC_URL}/home`,
+		COUNTRY: `${process.env.PUBLIC_URL}/country`,
+		COUNTRY_INFO: `${process.env.PUBLIC_URL}/country/:countryName`
 	},
 	ENDPOINTS: {
 		FULL_DATA: 'https://covid.ourworldindata.org/data/full_data.csv',
