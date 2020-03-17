@@ -1,0 +1,35 @@
+@import '../../../../../../styles/variables';
+
+.language-selector-component {
+  .p-dropdown {
+    height: 40px;
+    margin-right: 10px;
+    border-color: $blue;
+    width: 120px;
+    min-width: 120px;
+
+    .pi-chevron-down {
+      color: $blue;
+    }
+
+    .p-dropdown-label {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .language-option {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: 5px;
+    }
+
+    img {
+      width: 20px;
+      height: 13px;
+    }
+  }
+}
