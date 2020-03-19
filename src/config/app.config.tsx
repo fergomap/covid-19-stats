@@ -19,7 +19,7 @@ export const APP_CONSTANTS: AppConfig = {
 		COUNTRY_INFO: `${process.env.PUBLIC_URL}/country/:countryName`
 	},
 	ENDPOINTS: {
-		FULL_DATA: 'https://covid.ourworldindata.org/data/full_data.csv',
+		FULL_DATA: 'https://covid.ourworldindata.org/data/ecdc/full_data.csv',
 		MAP_DATA: `${process.env.PUBLIC_URL}/countries.geojson`
 	}
 };
