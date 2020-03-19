@@ -21,10 +21,10 @@ export const loadCountriesInfo = (): Promise<Country[]> => {
 				if (info[1] === currentCountry.country) {
 					currentCountry.info.push(new CountryInfoImp(
 						moment(info[0]),
-						Number(info[2] || 0),
-						Number(info[3] || 0),
-						Number(info[4] || 0),
-						Number(info[5] || 0)
+						Number(Number(info[2]) > 0 ? info[2] : 0),
+						Number(Number(info[3]) > 0 ? info[3] : 0),
+						Number(Number(info[4]) > 0 ? info[4] : 0),
+						Number(Number(info[5]) > 0 ? info[5] : 0)
 					));
 				} else {
 					if (currentCountry.country) {
