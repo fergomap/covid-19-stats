@@ -1,7 +1,7 @@
 {
   "header": "COVID-19 stats",
-  "home_title": "Information about COVID-19 in the world updated on ",
-  "home_subtitle": "The statistics are updated at the end of the day, the information is read from ourworldindata.org that obtains it from the World Health Organization (WHO)",
+  "home_title": "Information about COVID-19 in the world",
+  "home_subtitle": "The information is read from ourworldindata.org that obtains it from the World Health Organization (WHO)",
   "we_can": "We will defeat this virus, together we are stronger. #StayAtHome \uD83D\uDCAA",
   "country_title": "Information about COVID-19 in ",
   "map_empty_country": "There is no information of the countries in grey",

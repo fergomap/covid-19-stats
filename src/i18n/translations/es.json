@@ -1,7 +1,7 @@
 {
   "header": "Estadísticas del COVID-19",
-  "home_title": "Información sobre el COVID-19 en el mundo actualizada el ",
-  "home_subtitle": "Las estadísticas se actualizan al final del día, la información proviene de ourworldindata.org que la obtiene de la WHO (World Health Organization)",
+  "home_title": "Información sobre el COVID-19 en el mundo",
+  "home_subtitle": "La información proviene de ourworldindata.org que la obtiene de la WHO (World Health Organization)",
   "we_can": "Venceremos este virus haciendo caso de las autoridades sanitarias, juntos somos más fuertes. #QuédateEnCasa \n\uD83D\uDCAA",
   "country_title": "Información sobre el COVID-19 en ",
   "map_empty_country": "No hay información de los países en gris",

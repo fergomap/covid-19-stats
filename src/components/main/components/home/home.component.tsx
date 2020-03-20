@@ -5,7 +5,6 @@ import ChartInfoComponent from '../chart-info/chart-info.component';
 import {useDispatch, useSelector} from 'react-redux';
 import MainState from 'store/model/main.state';
 import TableInfoComponent from '../table-info/table-info.component';
-import moment from 'moment';
 import Country from 'model/country';
 import CountryRow from '../table-info/model/country-row';
 import CountryRowImp from '../table-info/model/country-row.imp';
@@ -15,12 +14,12 @@ import {loadMapInfo} from 'services/country.service';
 import {HIDE_LOADING_ACTION, SHOW_LOADING_ACTION} from 'store/loading/actions';
 import {SET_MAP_DATA_ACTION} from 'store/map/actions';
 import MapComponent from '../map/map.component';
+import CountryImp from 'model/country.imp';
 
 const HomeComponent: FunctionComponent = (): ReactElement => {
 	const intl = useIntl();
 	const dispatch = useDispatch();
 	const countries = useSelector((state: MainState) => state.stats.countries);
-	const dateFormat = useSelector((state: MainState) => state.language.language.dateFormat);
 	const selectorOption = useSelector((state: MainState) => state.currentView.selectorOption);
 	const mapData = useSelector((state: MainState) => state.map.data);
 	const [ search, setSearch ] = useState('');
@@ -64,7 +63,7 @@ const HomeComponent: FunctionComponent = (): ReactElement => {
 		<div className="row">
 			<ViewSelectorComponent/>
 			<div className="col-sm-12 white-box">
-				<h3><FormattedMessage id="home_title"/>{ moment().subtract(1, 'days').format(dateFormat) }</h3>
+				<h3><FormattedMessage id="home_title"/></h3>
 				<h5><FormattedMessage id="home_subtitle"/></h5>
 				<p><FormattedMessage id="we_can"/></p>
 				{ selectorOption.title === SelectorOptions.TABLE && <Fragment>
@@ -75,7 +74,7 @@ const HomeComponent: FunctionComponent = (): ReactElement => {
 					/>
                     <TableInfoComponent showDate={false} showCountryName={true} countryRowData={countryRowData}/>
 				</Fragment> }
-				{ selectorOption.title === SelectorOptions.CHART && <ChartInfoComponent countryInfo={countries.length ? countries[countries.length - 1].info : []}/> }
+				{ selectorOption.title === SelectorOptions.CHART && <ChartInfoComponent countryInfo={(countries.find(c => c.country.toLowerCase().includes('world')) || new CountryImp()).info}/> }
 				{ selectorOption.title === SelectorOptions.MAP && <MapComponent/> }
 			</div>
 		</div>

@@ -19,11 +19,11 @@ const MapComponent: FunctionComponent = (): ReactElement => {
 	const mapData = useSelector((state: MainState) => state.map.data);
 	const language = useSelector((state: MainState) => state.language.language);
 	const [ markerInfo, setMarkerInfo ] = useState<ReactElement>();
-	const [ date, setDate ] = useState(moment().subtract(1, 'days'));
+	const [ date, setDate ] = useState(moment());
 
 	useEffect(() => {
 		if (Object.keys(mapData).length && !map) {
-			const date = moment().subtract(1, 'days');
+			const date = moment();
 			map = L.map('map').setView([0, 0], 2);
 			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 				attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -70,8 +70,7 @@ const MapComponent: FunctionComponent = (): ReactElement => {
 		<p><FormattedMessage id="new_cases"/>{` <= ${MAP_CONSTANTS.COLORS.LEVEL_3.limit}`}<span className="color-span" style={{backgroundColor: MAP_CONSTANTS.COLORS.LEVEL_3.color}}/></p>
 		<p><FormattedMessage id="new_cases"/>{` <= ${MAP_CONSTANTS.COLORS.LEVEL_4.limit}`}<span className="color-span" style={{backgroundColor: MAP_CONSTANTS.COLORS.LEVEL_4.color}}/></p>
 		<p><FormattedMessage id="new_cases"/>{` > ${MAP_CONSTANTS.COLORS.LEVEL_4.limit}`}<span className="color-span" style={{backgroundColor: MAP_CONSTANTS.COLORS.LEVEL_5.color}}/></p>
-		<Calendar value={date.toDate()} onChange={selectDate} maxDate={moment().subtract(1, 'days').toDate()}
-				  minDate={moment('01-21-2020', "DD-MM-YYYY").toDate()} locale={language}
+		<Calendar value={date.toDate()} onChange={selectDate} locale={language}
 				  dateFormat={language.calendarDateFormat} readOnlyInput={true}
 		/>
 		{ markerInfo && <div className="marker-info">
